@@ -43,13 +43,13 @@ const form = document.querySelector('#testDataForm')
 
 // Add Event Listener for Submit Event
 
-form.addEventListener('submit', ( event ) => {
-    event.preventDefault();
+form.addEventListener('submitButton', ( e ) => {
+    e.preventDefault();
     let query_first = document.querySelector('#first-name')
     let query_last = document.querySelector('#last-name')
-    let first_name = event.path[0][0].value;
-    let last_name = event.path[0][1].value;
-    console.log(event)
+    let first_name = e.path[0][0].value;
+    let last_name = e.path[0][1].value;
+    console.log(e)
     console.log(first_name, last_name)
     console.log(`This came from the query selector: ${query_first.value}, ${query_last.value}`)
 })
